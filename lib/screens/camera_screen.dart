@@ -134,9 +134,23 @@ class _CameraScreenState extends State<CameraScreen> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildCameraInstructionsWidget(),
-          _buildCameraWidget(),
-          _buildCameraButtonWidget()
+          Stack(
+            //positioning is also based on the clip widget of _buildCameraWidget(), refer and
+            //change that too if needed
+            children: [
+              Positioned(
+                child: _buildCameraInstructionsWidget(),
+              ),
+              Positioned(
+                child: _buildCameraWidget(),
+              ),
+              Positioned(
+                top: MediaQuery.of(context).size.height / 1.4,
+                left: MediaQuery.of(context).size.width / 2.4,
+                child: _buildCameraButtonWidget(),
+              ),
+            ],
+          ),
         ],
       ),
     );
@@ -169,7 +183,7 @@ class _CameraScreenState extends State<CameraScreen> {
     return ClipPath(
       clipper: Clip(),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height / 1.6,
+        height: MediaQuery.of(context).size.height / 1.12,
         width: MediaQuery.of(context).size.width,
         child: SizedBox(
           height: 1,
@@ -228,7 +242,7 @@ class Clip extends CustomClipper<Path> {
   getClip(Size size) {
     Path path = Path()
       ..addRRect(RRect.fromRectAndRadius(
-        Rect.fromLTWH(10, 50, size.width - 20, size.height / 2),
+        Rect.fromLTWH(10, 150, size.width - 20, size.height / 2),
         const Radius.circular(20),
       ));
     return path;
