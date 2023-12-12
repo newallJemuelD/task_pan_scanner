@@ -22,7 +22,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
         children: [
           _buildPreviewDescriptionWidget(),
           const SizedBox(
-            height: 100,
+            height: 80,
           ),
           _buildImagePreviewWidget(),
           _buildBackNavigationWidget(),
@@ -91,17 +91,11 @@ class _PreviewScreenState extends State<PreviewScreen> {
             height: 10,
           ),
           Text(
-            'If the picture is unclear, click again',
+            'If the picture is unclear, click again \nblurred picture.',
             style: TextStyle(
               color: Color.fromARGB(255, 150, 150, 150),
               fontSize: 16,
-            ),
-          ),
-          Text(
-            'blurred picture.',
-            style: TextStyle(
-              color: Color.fromARGB(255, 150, 150, 150),
-              fontSize: 16,
+              height: 1.5,
             ),
           ),
         ],
