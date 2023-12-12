@@ -91,7 +91,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
             height: 10,
           ),
           Text(
-            'If the picture is unclear, click again \nblurred picture.',
+            'If the picture is unclear, click again.',
             style: TextStyle(
               color: Color.fromARGB(255, 150, 150, 150),
               fontSize: 16,

@@ -201,7 +201,7 @@ class _CameraScreenState extends State<CameraScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-            'Keep your PAN Card within the \nframe',
+            'Keep your PAN Card within the frame',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w500,
@@ -212,7 +212,7 @@ class _CameraScreenState extends State<CameraScreen> {
             height: 10,
           ),
           Text(
-            'Capture your photo and signature clearly. Avoid a \nblurred picture.',
+            'Capture your photo and signature clearly. Avoid a blurred picture.',
             style: TextStyle(
               color: Color.fromARGB(255, 150, 150, 150),
               fontSize: 16,
